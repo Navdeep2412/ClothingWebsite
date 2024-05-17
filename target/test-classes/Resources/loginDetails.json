@@ -1,0 +1,24 @@
+[
+{
+"email":"ngill@email.com",
+"password":"Patiala@11",
+"productName": "Men Tshirt",
+"cardholder":"Nav",
+"cardnum":"34234234",
+"cvcnum":"232",
+"month":"12",
+"year":"2029"
+
+
+},
+{
+"email":"r@email.com",
+"password":"Patiala@11",
+"productName": "Sleeveless Dress",
+"cardholder":"Ricky",
+"cardnum":"34234223",
+"cvcnum":"222",
+"month":"09",
+"year":"2030"
+}
+]
