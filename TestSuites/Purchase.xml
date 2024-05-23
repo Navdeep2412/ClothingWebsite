@@ -9,7 +9,7 @@
     <classes>
       
      
-      <class name="Clothing.ClothingWebsite.SubmitOrderStandalone1"/>
+      <class name="Clothing.ClothingWebsite.SubmitOrderTestCase"/>
     </classes>
   </test> 
    <test thread-count="5" name="ErrorValidation">

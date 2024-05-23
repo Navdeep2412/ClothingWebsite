@@ -20,11 +20,17 @@ public class ConfirmationPage extends AbstractComponents {
 	
 	@FindBy(css=".col-sm-9 p")
 	WebElement ConfirmMessage;
+	@FindBy(css=".check_out")
+	WebElement downloadinvoice;
 	
 	public String verifyConfirmMessage()
 	{
 		return ConfirmMessage.getText();
 	}
+	 public void downloadInvoice()
+	 {
+		 downloadinvoice.click();
+	 }
 	
 	
 	

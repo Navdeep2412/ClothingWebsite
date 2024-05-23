@@ -95,5 +95,85 @@
 			</pluginManagement>
 		</build>
 	</profile>
+	
+	<profile>
+		<id>MultipleProducts</id>
+		<build>
+			<pluginManagement>
+				<plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.2.5</version>
+        <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>TestSuites/MultipleProducts.xml</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
+      </plugin>
+</plugins>
+			</pluginManagement>
+		</build>
+	</profile>
+	
+	<profile>
+		<id>RemoveProducts</id>
+		<build>
+			<pluginManagement>
+				<plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.2.5</version>
+        <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>TestSuites/RemoveProducts.xml</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
+      </plugin>
+</plugins>
+			</pluginManagement>
+		</build>
+	</profile>
+	
+	<profile>
+		<id>SearchByName</id>
+		<build>
+			<pluginManagement>
+				<plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.2.5</version>
+        <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>TestSuites/SearchByName.xml</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
+      </plugin>
+</plugins>
+			</pluginManagement>
+		</build>
+	</profile>
+	
+	<profile>
+		<id>Signup</id>
+		<build>
+			<pluginManagement>
+				<plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.2.5</version>
+        <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>TestSuites/Signup.xml</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
+      </plugin>
+</plugins>
+			</pluginManagement>
+		</build>
+	</profile>
   </profiles>
 </project>

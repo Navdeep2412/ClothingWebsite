@@ -16,12 +16,13 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class SubmitOrderStandalone1 extends Base {
+public class SubmitOrderTestCase extends Base {
 	@Test(dataProvider="getData")
 	public void submitOrder(HashMap<String,String> input) throws IOException  {
 		
 		Login_Page loginPage=launchApplication();
 		ProductCatalogue productCatalogue=loginPage.loginApp(input.get("email"),input.get("password"));
+		
 		productCatalogue.addProductToCart(input.get("productName"));
 		
 		CartPage1 cartpage=productCatalogue.goToCartPage();
@@ -35,6 +36,9 @@ public class SubmitOrderStandalone1 extends Base {
 		
 		String message=confirmationPage.verifyConfirmMessage();
 		Assert.assertEquals(message,"Congratulations! Your order has been confirmed!");
+		confirmationPage.downloadInvoice();
+		confirmationPage.logout();
+		
 		
 		}
 	@DataProvider

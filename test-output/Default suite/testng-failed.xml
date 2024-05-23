@@ -6,7 +6,7 @@
       <class name="Clothing.ClothingWebsite.SubmitOrderStandalone1">
         <methods>
           <include name="teardown"/>
-          <include name="submitOrder" invocation-numbers="0"/>
+          <include name="submitOrder" invocation-numbers="1"/>
           <include name="launchApplication"/>
         </methods>
       </class> <!-- Clothing.ClothingWebsite.SubmitOrderStandalone1 -->

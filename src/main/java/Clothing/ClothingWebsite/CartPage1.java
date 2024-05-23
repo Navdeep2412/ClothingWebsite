@@ -24,13 +24,34 @@ public class CartPage1 extends AbstractComponents {
 	List<WebElement>cartproducts;
 	@FindBy(css="a.btn")
 	WebElement goToCheckoutbtn;
+	@FindBy(xpath="//table/tbody/tr/td[6]/child::a/child::i[@class='fa fa-times']")//i[@class='fa fa-times']
+	WebElement removeProduct;
+	@FindBy(xpath="//span [@id='empty_cart']//p[@class='text-center'] /b")
+	WebElement cartempty;
 	
 	public Boolean verifyProduct(String productName)
 	{
 		Boolean match=cartproducts.stream().anyMatch(cart->cart.getText().equalsIgnoreCase(productName));
 		return match;
 	}
+	public Boolean removeProduct(String productName)
+	{
+		Boolean match=cartproducts.stream().anyMatch(cart->cart.getText().equalsIgnoreCase(productName));
+
+		if(match==true)
+		{
+			removeProduct.click();
+		}
+		Boolean matchnotFound=cartproducts.stream().anyMatch(cart->cart.getText().equalsIgnoreCase(productName));
+		return matchnotFound;
+	}
 	
+	public String cartEmptyMessage()
+	{
+		waitForElementToAppear(cartempty);
+		String message=cartempty.getText();
+		return message;
+	}
 	public CheckoutPage goToCheckout()
 	{
 		goToCheckoutbtn.click();
